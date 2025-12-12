@@ -1,0 +1,91 @@
+text,label
+"System decomposed into independently deployable services, each with its own database and bounded context.",microservices
+"Each service runs in its own container and communicates with others via lightweight protocols like HTTP or gRPC.",microservices
+"Services are independently scaled; we deploy service A separately from service B using Kubernetes and Docker.",microservices
+"Inter-service communication through service discovery and API gateways; teams own different services.",microservices
+"Polyglot persistence chosen: different services use different databases depending on needs.",microservices
+"Event-driven interactions between services using message brokers and asynchronous messaging patterns.",microservices
+"Each microservice has its own CI/CD pipeline and is versioned independently.",microservices
+"Fault isolation: if one service fails, others continue; services are loosely coupled with well-defined interfaces.",microservices
+"Domain-driven design to split the monolith into multiple microservices owned by small teams.",microservices
+"Service mesh introduced to handle retries, circuit breaking, and observability across microservices.",microservices
+"Decompose application by business capability into microservices with independent lifecycles.",microservices
+"Microservices communicate via REST and messaging queues and are deployed as separate containers.",microservices
+"Independent databases per service to avoid shared schema and tight coupling across components.",microservices
+"Autoscaling at service-level and rolling updates for each microservice through Kubernetes deployments.",microservices
+"Services expose small narrow APIs and maintain internal state; the system uses decentralized governance.",microservices
+"Microservices use asynchronous events for eventual consistency between bounded contexts.",microservices
+"CI pipelines trigger independent builds for individual services and create docker images per service.",microservices
+"Versioned APIs for individual services and backward compatibility handled by API gateway.",microservices
+"Multiple teams own different microservices and release on independent schedules.",microservices
+"Monitoring per service and distributed tracing to follow requests across service boundaries.",microservices
+"Each service encapsulates its own domain logic and persists its own data storage.",microservices
+"Inter-service contracts enforced with consumer-driven contracts and schema validation.",microservices
+"Containerized microservices orchestrated with Kubernetes, sidecar patterns used for telemetry.",microservices
+"Services register with a discovery service and are load-balanced by the gateway.",microservices
+"Independent development and deployment of small services forming the application architecture.",microservices
+"Service boundaries defined by business functions, enabling parallel development.",microservices
+"Microservices architecture enabling horizontal scaling and independent fault recovery.",microservices
+"Design includes API gateway, circuit breakers, and per-service health checks.",microservices
+"Operational complexity managed with observability, logging, and centralized tracing tools.",microservices
+"Services are loosely coupled, replaceable, and communicate through well-defined interfaces.",microservices
+"Design a RESTful API exposing CRUD operations for resources via HTTP methods (GET, POST, PUT, DELETE).",rest_api
+"Endpoints follow resource-based URLs and use HTTP status codes to indicate success or failure.",rest_api
+"Stateless server that treats each request independently and uses JSON as the exchange format.",rest_api
+"Versioning of API supported via URL or headers and clients are expected to handle pagination.",rest_api
+"Authentication via OAuth2 bearer tokens and rate limiting on the API gateway.",rest_api
+"Define clear resource URIs and use HATEOAS for discoverability of linked resources.",rest_api
+"API returns standard response structures and uses query parameters for filtering and sorting.",rest_api
+"API documentation produced with OpenAPI/Swagger to describe endpoints, schemas and examples.",rest_api
+"Idempotent PUT for updates and POST for create; PATCH used for partial updates when needed.",rest_api
+"API contract defined using OpenAPI and the server responds with appropriate error payloads.",rest_api
+"Request validation performed and schema definitions documented for client consumption.",rest_api
+"Client libraries generated from OpenAPI specs to standardize integration.",rest_api
+"Request/response examples and authentication flows described for external consumers.",rest_api
+"Use of caching headers (ETag, Cache-Control) to optimize API responses.",rest_api
+"Rate limiting and throttling strategies to protect backend resources from abuse.",rest_api
+"Stateless endpoints with clear separation between resources and actions.",rest_api
+"API returns hypermedia links where appropriate and adheres to REST constraints.",rest_api
+"Endpoints organized by resource types like /users, /orders and support nested resources.",rest_api
+"Error handling standardized with consistent error codes and messages in JSON format.",rest_api
+"API gateway routes external REST API calls to internal services and enforces policies.",rest_api
+"Support for CORS to allow browser-based clients to consume the REST API.",rest_api
+"Documenting API with examples, request schemas and authentication mechanisms.",rest_api
+"Version the API to avoid breaking changes for existing clients (v1, v2 in the path).",rest_api
+"Use of query params for filtering, and pagination with limit/offset or cursor tokens.",rest_api
+"Expose resources via predictable URIs and use HTTP verbs to represent actions.",rest_api
+"Design focuses on resource modeling, statelessness, and standard HTTP conventions.",rest_api
+"Integration tests target endpoints and use mock services to simulate consumers.",rest_api
+"Logging request IDs and using structured logs for tracing API requests.",rest_api
+"REST API layer abstracts business logic and forwards calls to backend processors.",rest_api
+"Clients interact with the server using standard HTTP semantics and JSON payloads.",rest_api
+"Functions as a Service (FaaS) where business logic is implemented as event-triggered functions.",serverless
+"No servers to manage; functions scale automatically and billing is per-execution/time-based.",serverless
+"Use cloud provider functions triggered by HTTP requests, queue messages or scheduled cron events.",serverless
+"Stateless functions that execute short-lived tasks and offload long processing to managed services.",serverless
+"Deploy small functions independently; cold starts and provisioned concurrency are considered.",serverless
+"Integration with managed services like object storage, managed databases, and event streams.",serverless
+"Serverless architecture uses cloud events to orchestrate workflows across functions and services.",serverless
+"Micro-billing model where you pay only for function runtime and not idle server costs.",serverless
+"Use cloud provider managed services (e.g., API Gateway + Lambda) to build APIs without servers.",serverless
+"Functions invoked by HTTP gateway, message queue events or storage triggers for processing.",serverless
+"Event-driven serverless pipelines wire functions together with message queues and streams.",serverless
+"Stateless compute that scales to zero when idle and requires attention to startup latency.",serverless
+"Serverless functions manage single responsibilities and integrate with managed auth services.",serverless
+"CI/CD deploys functions and handles versioning and aliases for gradual rollouts.",serverless
+"Design for idempotent functions and retry strategies because invocations can be repeated.",serverless
+"Serverless reduces ops overhead by relying on provider-managed infrastructure.",serverless
+"Cold start mitigation via warming strategies and configuring execution memory for performance.",serverless
+"Use of serverless frameworks to package and deploy functions across environments.",serverless
+"Functions used for short webhooks, data processing, and scheduled background jobs.",serverless
+"Architecture emphasizes event sources, function triggers, and managed downstream services.",serverless
+"Serverless workflows built by chaining functions and using step-functions or orchestration.",serverless
+"Local development and testing simulated with function emulators before cloud deployment.",serverless
+"Serverless favors ephemeral compute and externalizes state to managed databases.",serverless
+"Observability includes tracing individual function invocations and aggregate logs.",serverless
+"Autoscaling at function level with no persistent servers to provision or maintain.",serverless
+"Pay-per-use pricing and quick time-to-market for small feature launches or prototypes.",serverless
+"Use of API Gateway to expose HTTP endpoints backed by serverless functions.",serverless
+"Function-level permissions and least-privilege IAM roles to restrict resource access.",serverless
+"Handlers written in supported runtimes and packaged with only required dependencies.",serverless
+"Serverless promotes event-driven patterns and minimal infrastructure management.",serverless
